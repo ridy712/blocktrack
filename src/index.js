@@ -10,6 +10,8 @@ import AddProduct from './pages/AddProduct';
 import About from './pages/About';
 import Connexion from './pages/Connexion';
 import Register from './pages/Register';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 const container = document.getElementById('root');
 const root = createRoot(container);

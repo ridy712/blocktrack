@@ -3,19 +3,42 @@ import { Link, Outlet } from 'react-router-dom'
 function Header() {
   return (
     <div>
-    <nav>
-      <div>
-        <h1> BlockTrack</h1>
+   
+
+    <nav className="navbar navbar-expand-lg bg-light">
+    <div className="container-fluid">
+      <Link to = '/'className="navbar-brand" >Home</Link>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <li className="nav-item">
+            <Link to = '/product'className="nav-link active" aria-current="page">Product</Link>
+          </li>
+          <li className="nav-item">
+            <Link to = '/add-product'className="nav-link">Add Product</Link>
+          </li>
+          
+          <li className="nav-item">
+            <Link to = '/connexion' className="nav-link" >Se connecter</Link>
+          </li>
+          
+          <li className="nav-item">
+            <Link to = '/register'className="nav-link ">S'inscrire</Link>
+          </li>
+          
+          <li className="nav-item">
+            <Link to = '/about'className="nav-link ">About</Link>
+          </li>
+        </ul>
+        <form className="d-flex" role="search">
+          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button className="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
-      <ul>
-          <Link to = '/'> <li>Home</li> </Link>
-          <Link to = '/product'> <li>Product</li> </Link>
-          <Link to = '/add-product'> <li>Add Product</li> </Link>
-          <Link to ="/connexion"> <li>Se connecter</li> </Link>
-          <Link to = '/register'> <li>S'inscrire</li> </Link>
-          <Link to = '/about'> <li>About</li> </Link>
-      </ul>
-    </nav>
+    </div>
+</nav>
     <Outlet></Outlet>
     </div>
   )
